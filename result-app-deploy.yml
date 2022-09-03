@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: result-app
+  labels:
+    app: voting-app
+spec:
+  template:
+    metadata:
+      name: result-app
+      labels:
+        app: voting-app
+    spec:
+      containers:
+        - name: result-container
+          image: noura93/result:latest
+          ports:
+            - containerPort: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voting-app

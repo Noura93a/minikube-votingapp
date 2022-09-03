@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: worker-app
+  labels:
+    app: voting-app
+spec:
+  template:
+    metadata:
+      name: worker-app
+      labels:
+        app: voting-app
+    spec:
+      containers:
+        - name: worker-container
+          image: noura93/worker:latest
+  replicas: 1
+  selector:
+    matchLabels:
+      app: voting-app
