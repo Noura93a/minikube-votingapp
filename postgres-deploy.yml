@@ -29,7 +29,7 @@ spec:
       volumes:  
         - name: pg-volume
           persistentVolumeClaim:
-            claimName: voting-app-PersistentVolumeclaim
+            claimName: voting-app-persistentvolumeclaim
   replicas: 1
   selector:
     matchLabels:

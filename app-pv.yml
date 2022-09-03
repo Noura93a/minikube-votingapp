@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: voting-app-PersistentVolume
+  name: voting-app-persistentvolume
 spec:
   hostPath:
     path: /votingapp/persistent-volume

@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: voting-app-PersistentVolumeclaim
+  name: voting-app-persistentvolumeclaim
 spec:
   accessModes:
     - ReadWriteOnce
