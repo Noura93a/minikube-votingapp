@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: postgres-db
   labels:
-    app: voting-app
+    app: pg-db
 spec:
   type: ClusterIP
   ports:
@@ -11,7 +11,7 @@ spec:
       port: 5432
       targetPort: 5432
   selector:
-    app: voting-app
+    app: pg-db
 
   
     

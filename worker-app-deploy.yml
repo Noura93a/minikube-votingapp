@@ -3,13 +3,13 @@ kind: Deployment
 metadata:
   name: worker-app
   labels:
-    app: voting-app
+    app: worker-app
 spec:
   template:
     metadata:
       name: worker-app
       labels:
-        app: voting-app
+        app: worker-app
     spec:
       containers:
         - name: worker-container
@@ -17,4 +17,4 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: voting-app
+      app: worker-app

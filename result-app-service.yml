@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: result-app-service
   labels:
-    app: voting-app
+    app: result-app
 spec:
   type: NodePort
   ports:
@@ -13,6 +13,6 @@ spec:
       nodePort: 31010
       protocol: TCP
   selector:
-    app: voting-app
+    app: result-app
 
 

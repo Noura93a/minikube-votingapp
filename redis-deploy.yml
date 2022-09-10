@@ -3,13 +3,13 @@ kind: Deployment
 metadata:
   name: redis
   labels:
-    app: voting-app
+    app: redis-db
 spec:
   template:
     metadata:
       name: redis
       labels:
-        app: voting-app
+        app: redis-db
     spec:
       containers:
         - name: redis
@@ -19,4 +19,4 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: voting-app
+      app: redis-db

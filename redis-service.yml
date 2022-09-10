@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: redis
   labels:
-    app: voting-app
+    app: redis-db
 spec:
   type: ClusterIP
   ports:
@@ -11,7 +11,7 @@ spec:
       port: 6379
       targetPort: 6379
   selector:
-    app: voting-app
+    app: redis-db
 
 
     
