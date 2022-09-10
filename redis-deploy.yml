@@ -17,7 +17,7 @@ spec:
           ports:
             - containerPort: 6379
           volumeMounts:
-        - mountPath: /var/lib/redis/data
+        - mountPath: /redisdb/data
           name: redis-pv-claim
       volumes:
       - name: redis-pv-claim
