@@ -14,16 +14,9 @@ spec:
     spec:
       containers:
         - name: redis
-          image: redis
+          image: redis:latest
           ports:
             - containerPort: 6379
-          volumeMounts:
-          - mountPath: /redisdb/data
-            name: redis-pv-claim
-      volumes:
-      - name: redis-pv-claim
-        persistentVolumeClaim:
-          claimName: redis-pv-claim
   replicas: 1
   selector:
     matchLabels:
